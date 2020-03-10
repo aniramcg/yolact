@@ -88,6 +88,19 @@ dataset_base = Config({
     'label_map': None
 })
 
+my_custom_dataset = dataset_base.copy({
+    'name': 'My Dataset',
+
+    'train_images': '/content/drive/My Drive/TFG/TFG MARINA CALZADA/clean_data/train/',
+    'train_info':   '/content/drive/My Drive/TFG/TFG MARINA CALZADA/clean_data/YOLACT/train_labels/',
+
+    'valid_images': '/content/drive/My Drive/TFG/TFG MARINA CALZADA/clean_data/test/',
+    'valid_info':   '/content/drive/My Drive/TFG/TFG MARINA CALZADA/clean_data/YOLACT/train_labels/test',
+
+    'has_gt': False,
+    'class_names': ('cell_id' )
+})
+
 coco2014_dataset = dataset_base.copy({
     'name': 'COCO 2014',
     
@@ -617,8 +630,8 @@ yolact_base_config = coco_base_config.copy({
     'name': 'yolact_base',
 
     # Dataset stuff
-    'dataset': coco2017_dataset,
-    'num_classes': len(coco2017_dataset.class_names) + 1,
+    'dataset': my_custom_dataset,
+    'num_classes': 1,
 
     # Image Size
     'max_size': 550,
