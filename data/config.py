@@ -92,10 +92,10 @@ my_custom_dataset = dataset_base.copy({
     'name': 'My Dataset',
 
     'train_images': '/content/drive/My Drive/TFG/TFG MARINA CALZADA/clean_data/train/',
-    'train_info':   '/content/drive/My Drive/TFG/TFG MARINA CALZADA/clean_data/YOLACT/train_labels/',
+    'train_info':   '/content/drive/My Drive/TFG/TFG MARINA CALZADA/clean_data/YOLACT/train_labels.json',
 
-    'valid_images': '/content/drive/My Drive/TFG/TFG MARINA CALZADA/clean_data/test/',
-    'valid_info':   '/content/drive/My Drive/TFG/TFG MARINA CALZADA/clean_data/YOLACT/train_labels/test',
+    'valid_images': '/content/drive/My Drive/TFG/TFG MARINA CALZADA/RGB/test/',
+    'valid_info':   '/content/drive/My Drive/TFG/TFG MARINA CALZADA/clean_data/YOLACT/test_labels.json',
 
     'has_gt': False,
     'class_names': ('cell_id' )
